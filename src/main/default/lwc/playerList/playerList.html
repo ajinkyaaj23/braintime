@@ -1,0 +1,19 @@
+<template>
+    <h1>Players {playerCount}</h1>
+
+    <template if:true={error}> {error} </template>
+
+    <template if:false={error}>
+        <!-- <div class="slds-grid slds-wrap"> -->
+        <ol class="slds-list_ordered slds-grid slds-wrap">
+            <template for:each={playerNames} for:item="playerName">
+                <li 
+                    key={playerName}
+                    class="slds-col slds-size_4-of-12 name">
+                    {playerName}
+                </li>
+            </template>
+        </ol>
+        <!-- </div> -->
+    </template>
+</template>

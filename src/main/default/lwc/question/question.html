@@ -1,0 +1,32 @@
+<template>
+    <h1>{questionObject.label}</h1>
+
+    <template if:true={questionObject.isImageAvailable}>
+        <div>
+            <img src={questionObject.imageURL} width="500" height="600" style="max-height: 450px; max-width: 800px;">
+        </div>
+    </template>
+
+    <div class="answerContainer">
+        <div class="answer">
+            <div onclick={handleAnswerClick} data-answer="A">
+                <span>A. </span> {questionObject.answerA}
+            </div>
+        </div>
+        <div class="answer">
+            <div onclick={handleAnswerClick} data-answer="B">
+                <span>B. </span> {questionObject.answerB}
+            </div>
+        </div>
+        <div class="answer">
+            <div onclick={handleAnswerClick} data-answer="C">
+                <span>C. </span> {questionObject.answerC}
+            </div>
+        </div>
+        <div class="answer">
+            <div onclick={handleAnswerClick} data-answer="D">
+                <span>D. </span> {questionObject.answerD}
+            </div>
+        </div>
+    </div>
+</template>
